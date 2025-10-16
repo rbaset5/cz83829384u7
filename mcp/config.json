@@ -1,0 +1,86 @@
+{
+  "mcp": {
+    "version": "1.0.0",
+    "name": "CallLock n8n Automation",
+    "description": "MCP configuration for CallLock missed call automation workflows",
+    "integrations": {
+      "twilio": {
+        "enabled": true,
+        "description": "SMS and voice webhook handling",
+        "required": true
+      },
+      "openai": {
+        "enabled": true,
+        "description": "GPT-4 conversation handling",
+        "required": true
+      },
+      "google_sheets": {
+        "enabled": true,
+        "description": "Lead data storage and tracking",
+        "required": true
+      },
+      "google_calendar": {
+        "enabled": true,
+        "description": "Availability checking",
+        "required": true
+      },
+      "cal_com": {
+        "enabled": true,
+        "description": "Appointment booking",
+        "required": true
+      },
+      "close_crm": {
+        "enabled": true,
+        "description": "Task and contact management",
+        "required": true
+      },
+      "slack": {
+        "enabled": true,
+        "description": "Alerts and notifications",
+        "required": false
+      }
+    },
+    "workflows": {
+      "WF-01": {
+        "name": "Missed Call Intake",
+        "status": "TODO",
+        "description": "Captures missed calls and sends initial SMS"
+      },
+      "WF-02": {
+        "name": "SMS Conversation Handler",
+        "status": "TODO",
+        "description": "AI-powered conversation management"
+      },
+      "WF-03": {
+        "name": "Status Handler",
+        "status": "TODO",
+        "description": "Handles SMS delivery status callbacks"
+      },
+      "WF-04": {
+        "name": "Abandonment Recovery",
+        "status": "TODO",
+        "description": "Re-engages silent leads"
+      },
+      "WF-05": {
+        "name": "Second Follow-up",
+        "status": "TODO",
+        "description": "Final attempt to engage leads"
+      }
+    },
+    "settings": {
+      "sms_response_time_sla": 5,
+      "ai_response_time_sla": 10,
+      "max_retry_attempts": 3,
+      "retry_backoff_multiplier": 2,
+      "business_hours": {
+        "monday": "08:00-18:00",
+        "tuesday": "08:00-18:00",
+        "wednesday": "08:00-18:00",
+        "thursday": "08:00-18:00",
+        "friday": "08:00-18:00",
+        "saturday": "09:00-15:00",
+        "sunday": "closed"
+      }
+    }
+  }
+}

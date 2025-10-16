@@ -1,0 +1,117 @@
+# CallLock n8n Automation - AI Development Rules
+
+## Project Mission
+Build a Done-For-You automation platform that captures missed calls for trades/service businesses and converts them into booked appointments using AI-powered SMS conversations. The system requires zero technical work from clients and deploys in 48 hours.
+
+## 📋 Product Requirements (PRD v1.0)
+Reference: `/docs/PRD_MVP_V1.md`
+
+### MVP Scope
+- 5 core workflows (WF-01 through WF-05)
+- SMS-only communication (no voice AI)
+- Single location support
+- English language only
+- 48-hour implementation
+
+### Success Metrics
+- 30% missed calls → booked jobs
+- < 5 second SMS response time
+- 95%+ SMS delivery rate
+- $5,000+ monthly revenue recovery per client
+
+### User Stories (Priority Order)
+1. US-001: Instant SMS response [P0]
+2. US-002: AI service qualification [P0]
+3. US-003: Direct calendar booking [P0]
+4. US-004: Landline detection [P0]
+5. US-005: After-hours routing [P0]
+
+## 🎯 Current Sprint Goals
+Check `/docs/PRD_MVP_V1.md#implementation-timeline` for this week's objectives
+
+## Development Guidelines
+
+### Code Quality Standards
+- All n8n workflows must include error handling nodes
+- Use descriptive node names (e.g., "Extract Phone Number" not "Extract")
+- Include comments for complex logic
+- Test all webhook endpoints with real data
+
+### Performance Requirements
+- SMS response time: < 5 seconds
+- AI response time: < 10 seconds
+- System uptime: 99.9% during business hours
+- Handle 100 concurrent conversations
+
+### Security Standards
+- Encrypt all sensitive data at rest
+- Use environment variables for API keys
+- Implement TCPA compliance for SMS
+- Validate all webhook inputs
+
+### Workflow Naming Convention
+- WF-01: Missed Call Intake
+- WF-02: SMS Conversation Handler
+- WF-03: Status Handler
+- WF-04: Abandonment Recovery
+- WF-05: Second Follow-up
+
+## Error Handling Standards
+- Retry failed API calls 3x with exponential backoff
+- Log all errors to monitoring system
+- Create CRM tasks for manual intervention
+- Send Slack alerts for critical failures
+
+## Testing Requirements
+- Test with real phone numbers before production
+- Validate all state machine transitions
+- Test error scenarios (API failures, invalid inputs)
+- Load test with 100+ concurrent users
+
+## 📚 Key Documents to Reference
+- `/docs/PRD_MVP_V1.md` - Product requirements and acceptance criteria
+- `/docs/CORE_GUIDELINES.md` - Development standards
+- `/docs/FEATURE_REGISTRY.md` - Feature tracking and status
+- `/docs/MCP_COMMANDS.md` - MCP command reference
+- `/docs/CHANGELOG.md` - Version history and changes
+
+## AI Assistant Guidelines
+
+### When Writing Code
+1. Always reference the PRD for requirements
+2. Include error handling for all external API calls
+3. Use descriptive variable and function names
+4. Add comments explaining business logic
+5. Validate inputs before processing
+
+### When Creating Workflows
+1. Follow the WF-XX naming convention
+2. Include webhook validation nodes
+3. Add error handling and retry logic
+4. Log all important events
+5. Test with real data before deployment
+
+### When Making Decisions
+1. Check if feature is in MVP scope
+2. Verify against acceptance criteria
+3. Consider performance implications
+4. Ensure security compliance
+5. Update documentation as needed
+
+## Out of Scope for MVP
+- Voice AI
+- Email integration
+- Multi-language support
+- Payment processing
+- Multi-location support
+- Custom AI training
+
+## Current Development Phase
+Week 1: Foundation (Twilio setup, WF-01 Intake, Sheets structure)
+
+## Success Criteria
+- 30% of missed calls convert to booked jobs
+- < 5 second response time to first SMS
+- 95%+ SMS delivery rate
+- $5,000+ monthly revenue recovery per client
+- 48-hour setup time for new clients

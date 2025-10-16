@@ -1,0 +1,15 @@
+# Type: feat|fix|docs|test|refactor
+# Scope: WF-01|WF-02|etc
+# PRD Story: US-001|US-002|etc
+
+# Example:
+# feat(WF-02): implement GPT-4 conversation handler [US-002]
+
+# PRD Reference: docs/PRD_MVP_V1.md
+# Acceptance Criteria Met:
+# - [ ] 
+# - [ ] 
+
+# KPIs Affected:
+# - Response Time: 
+# - Booking Rate:

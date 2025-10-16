@@ -1,0 +1,44 @@
+{
+  "commands": [
+    {
+      "name": "Check PRD Scope",
+      "description": "Verify if feature is in MVP scope",
+      "prompt": "Check if this feature is within PRD MVP scope in docs/PRD_MVP_V1.md"
+    },
+    {
+      "name": "Get User Story",
+      "description": "Show user story details",
+      "prompt": "Show me user story {{story_id}} from docs/PRD_MVP_V1.md"
+    },
+    {
+      "name": "Validate Against PRD",
+      "description": "Check if implementation meets PRD",
+      "prompt": "Validate this implementation against PRD acceptance criteria in docs/PRD_MVP_V1.md"
+    },
+    {
+      "name": "Show Week Goals",
+      "description": "Show this week's implementation goals",
+      "prompt": "What should I be working on this week according to docs/PRD_MVP_V1.md#implementation-timeline"
+    },
+    {
+      "name": "Check Feature Status",
+      "description": "Show current feature registry status",
+      "prompt": "Show me the current status of features in docs/FEATURE_REGISTRY.md"
+    },
+    {
+      "name": "Validate Workflow",
+      "description": "Check workflow against PRD requirements",
+      "prompt": "Validate this n8n workflow against PRD requirements and acceptance criteria"
+    },
+    {
+      "name": "Show KPIs",
+      "description": "Display success metrics from PRD",
+      "prompt": "Show me the success metrics and KPIs from docs/PRD_MVP_V1.md#success-metrics"
+    },
+    {
+      "name": "Check Acceptance Criteria",
+      "description": "Show MVP acceptance criteria",
+      "prompt": "Show me the MVP acceptance criteria from docs/PRD_MVP_V1.md#mvp-acceptance-criteria"
+    }
+  ]
+}

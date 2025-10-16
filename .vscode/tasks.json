@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Check PRD Status",
+      "type": "shell",
+      "command": "node scripts/prd_status.js",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Validate Against PRD",
+      "type": "shell",
+      "command": "echo 'Checking alignment with PRD...' && grep -n 'TODO\\|FIXME\\|HACK' workflows/production/*.json || echo 'No TODO/FIXME/HACK found in workflows'",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Show Current Sprint",
+      "type": "shell",
+      "command": "sed -n '/Week 1: Foundation/,/Week 2:/p' docs/PRD_MVP_V1.md",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Show User Stories",
+      "type": "shell",
+      "command": "grep -A 1 -B 1 'US-0' docs/PRD_MVP_V1.md",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Check Feature Registry",
+      "type": "shell",
+      "command": "grep -A 2 -B 1 'Status' docs/FEATURE_REGISTRY.md",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    }
+  ]
+}

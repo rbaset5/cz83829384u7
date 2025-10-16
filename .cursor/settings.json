@@ -1,0 +1,18 @@
+{
+  "ai": {
+    "model": "claude-3-opus",
+    "temperature": 0.3,
+    "contextWindow": 200000,
+    "includeFiles": [
+      ".cursorrules",
+      "docs/PRD_MVP_V1.md",
+      "docs/FEATURE_REGISTRY.md",
+      "docs/CORE_GUIDELINES.md"
+    ],
+    "autoIncludePatterns": [
+      "workflows/production/*.json",
+      "mcp/config.json",
+      "docs/PRD_*.md"
+    ]
+  }
+}
